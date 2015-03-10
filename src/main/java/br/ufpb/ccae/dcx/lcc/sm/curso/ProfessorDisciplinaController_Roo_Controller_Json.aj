@@ -21,13 +21,17 @@ privileged aspect ProfessorDisciplinaController_Roo_Controller_Json {
     @RequestMapping(value = "/{id}", method = RequestMethod.GET, headers = "Accept=application/json")
     @ResponseBody
     public ResponseEntity<String> ProfessorDisciplinaController.showJson(@PathVariable("id") Long id) {
-        ProfessorDisciplina professorDisciplina = ProfessorDisciplina.findProfessorDisciplina(id);
         HttpHeaders headers = new HttpHeaders();
         headers.add("Content-Type", "application/json; charset=utf-8");
-        if (professorDisciplina == null) {
-            return new ResponseEntity<String>(headers, HttpStatus.NOT_FOUND);
+        try {
+            ProfessorDisciplina professorDisciplina = ProfessorDisciplina.findProfessorDisciplina(id);
+            if (professorDisciplina == null) {
+                return new ResponseEntity<String>(headers, HttpStatus.NOT_FOUND);
+            }
+            return new ResponseEntity<String>(professorDisciplina.toJson(), headers, HttpStatus.OK);
+        } catch (Exception e) {
+            return new ResponseEntity<String>("{\"ERROR\":"+e.getMessage()+"\"}", headers, HttpStatus.INTERNAL_SERVER_ERROR);
         }
-        return new ResponseEntity<String>(professorDisciplina.toJson(), headers, HttpStatus.OK);
     }
     
     @RequestMapping(headers = "Accept=application/json")
@@ -35,53 +39,73 @@ privileged aspect ProfessorDisciplinaController_Roo_Controller_Json {
     public ResponseEntity<String> ProfessorDisciplinaController.listJson() {
         HttpHeaders headers = new HttpHeaders();
         headers.add("Content-Type", "application/json; charset=utf-8");
-        List<ProfessorDisciplina> result = ProfessorDisciplina.findAllProfessorDisciplina();
-        return new ResponseEntity<String>(ProfessorDisciplina.toJsonArray(result), headers, HttpStatus.OK);
+        try {
+            List<ProfessorDisciplina> result = ProfessorDisciplina.findAllProfessorDisciplina();
+            return new ResponseEntity<String>(ProfessorDisciplina.toJsonArray(result), headers, HttpStatus.OK);
+        } catch (Exception e) {
+            return new ResponseEntity<String>("{\"ERROR\":"+e.getMessage()+"\"}", headers, HttpStatus.INTERNAL_SERVER_ERROR);
+        }
     }
     
     @RequestMapping(method = RequestMethod.POST, headers = "Accept=application/json")
     public ResponseEntity<String> ProfessorDisciplinaController.createFromJson(@RequestBody String json, UriComponentsBuilder uriBuilder) {
-        ProfessorDisciplina professorDisciplina = ProfessorDisciplina.fromJsonToProfessorDisciplina(json);
-        professorDisciplina.persist();
         HttpHeaders headers = new HttpHeaders();
         headers.add("Content-Type", "application/json");
-        RequestMapping a = (RequestMapping) getClass().getAnnotation(RequestMapping.class);
-        headers.add("Location",uriBuilder.path(a.value()[0]+"/"+professorDisciplina.getId().toString()).build().toUriString());
-        return new ResponseEntity<String>(headers, HttpStatus.CREATED);
+        try {
+            ProfessorDisciplina professorDisciplina = ProfessorDisciplina.fromJsonToProfessorDisciplina(json);
+            professorDisciplina.persist();
+            RequestMapping a = (RequestMapping) getClass().getAnnotation(RequestMapping.class);
+            headers.add("Location",uriBuilder.path(a.value()[0]+"/"+professorDisciplina.getId().toString()).build().toUriString());
+            return new ResponseEntity<String>(headers, HttpStatus.CREATED);
+        } catch (Exception e) {
+            return new ResponseEntity<String>("{\"ERROR\":"+e.getMessage()+"\"}", headers, HttpStatus.INTERNAL_SERVER_ERROR);
+        }
     }
     
     @RequestMapping(value = "/jsonArray", method = RequestMethod.POST, headers = "Accept=application/json")
     public ResponseEntity<String> ProfessorDisciplinaController.createFromJsonArray(@RequestBody String json) {
-        for (ProfessorDisciplina professorDisciplina: ProfessorDisciplina.fromJsonArrayToProfessorDisciplina(json)) {
-            professorDisciplina.persist();
-        }
         HttpHeaders headers = new HttpHeaders();
         headers.add("Content-Type", "application/json");
-        return new ResponseEntity<String>(headers, HttpStatus.CREATED);
+        try {
+            for (ProfessorDisciplina professorDisciplina: ProfessorDisciplina.fromJsonArrayToProfessorDisciplina(json)) {
+                professorDisciplina.persist();
+            }
+            return new ResponseEntity<String>(headers, HttpStatus.CREATED);
+        } catch (Exception e) {
+            return new ResponseEntity<String>("{\"ERROR\":"+e.getMessage()+"\"}", headers, HttpStatus.INTERNAL_SERVER_ERROR);
+        }
     }
     
     @RequestMapping(value = "/{id}", method = RequestMethod.PUT, headers = "Accept=application/json")
     public ResponseEntity<String> ProfessorDisciplinaController.updateFromJson(@RequestBody String json, @PathVariable("id") Long id) {
         HttpHeaders headers = new HttpHeaders();
         headers.add("Content-Type", "application/json");
-        ProfessorDisciplina professorDisciplina = ProfessorDisciplina.fromJsonToProfessorDisciplina(json);
-        professorDisciplina.setId(id);
-        if (professorDisciplina.merge() == null) {
-            return new ResponseEntity<String>(headers, HttpStatus.NOT_FOUND);
+        try {
+            ProfessorDisciplina professorDisciplina = ProfessorDisciplina.fromJsonToProfessorDisciplina(json);
+            professorDisciplina.setId(id);
+            if (professorDisciplina.merge() == null) {
+                return new ResponseEntity<String>(headers, HttpStatus.NOT_FOUND);
+            }
+            return new ResponseEntity<String>(headers, HttpStatus.OK);
+        } catch (Exception e) {
+            return new ResponseEntity<String>("{\"ERROR\":"+e.getMessage()+"\"}", headers, HttpStatus.INTERNAL_SERVER_ERROR);
         }
-        return new ResponseEntity<String>(headers, HttpStatus.OK);
     }
     
     @RequestMapping(value = "/{id}", method = RequestMethod.DELETE, headers = "Accept=application/json")
     public ResponseEntity<String> ProfessorDisciplinaController.deleteFromJson(@PathVariable("id") Long id) {
-        ProfessorDisciplina professorDisciplina = ProfessorDisciplina.findProfessorDisciplina(id);
         HttpHeaders headers = new HttpHeaders();
         headers.add("Content-Type", "application/json");
-        if (professorDisciplina == null) {
-            return new ResponseEntity<String>(headers, HttpStatus.NOT_FOUND);
+        try {
+            ProfessorDisciplina professorDisciplina = ProfessorDisciplina.findProfessorDisciplina(id);
+            if (professorDisciplina == null) {
+                return new ResponseEntity<String>(headers, HttpStatus.NOT_FOUND);
+            }
+            professorDisciplina.remove();
+            return new ResponseEntity<String>(headers, HttpStatus.OK);
+        } catch (Exception e) {
+            return new ResponseEntity<String>("{\"ERROR\":"+e.getMessage()+"\"}", headers, HttpStatus.INTERNAL_SERVER_ERROR);
         }
-        professorDisciplina.remove();
-        return new ResponseEntity<String>(headers, HttpStatus.OK);
     }
     
 }

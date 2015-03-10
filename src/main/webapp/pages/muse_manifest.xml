@@ -1,0 +1,92 @@
+<manifest alg="2" build="1176" opt="false" iceEnabled="true" iceMarkupVersion="2" exportTarget="other" resolutions="1x" timestamp="1425644048992">
+  <folder name="css">
+    <file name="site_global.css" crc="236082554"/>
+    <file name="contatofeedback.css" crc="3886946557" ref="contatofeedback"/>
+    <file name="a-cidade.css" crc="3930079234" ref="a-cidade"/>
+    <file name="quem-somos.css" crc="3869771303" ref="quem-somos"/>
+    <file name="o-curso-de-lcc.css" crc="4162609399" ref="o-curso-de-lcc"/>
+    <file name="a-universidade.css" crc="4254460278" ref="a-universidade"/>
+    <file name="index.css" crc="4085514876" ref="index"/>
+  </folder>
+  <folder name="scripts">
+    <file name="jquery-1.8.3.min.js" crc="221936890" ref="phone>index:phone>a-universidade:phone>a-cidade:phone>quem-somos:phone>o-curso-de-lcc:phone>contatofeedback:tablet>index:index:a-universidade:o-curso-de-lcc:quem-somos:a-cidade:contatofeedback"/>
+    <file name="museutils.js" crc="3793461109" ref="phone>index:phone>a-universidade:phone>a-cidade:phone>quem-somos:phone>o-curso-de-lcc:phone>contatofeedback:tablet>index:index:a-universidade:o-curso-de-lcc:quem-somos:a-cidade:contatofeedback"/>
+    <file name="jquery.musemenu.js" crc="492415246" ref="phone>index:phone>a-universidade:phone>a-cidade:phone>quem-somos:phone>o-curso-de-lcc:phone>contatofeedback:tablet>index:index:a-universidade:o-curso-de-lcc:quem-somos:a-cidade:contatofeedback"/>
+    <file name="jquery.musepolyfill.bgsize.js" crc="3843766759" ref="phone>index:tablet>index:index"/>
+    <file name="webpro.js" crc="4263367560" ref="phone>index:phone>contatofeedback:tablet>index:index:contatofeedback"/>
+    <file name="musewpslideshow.js" crc="126372691" ref="phone>index:tablet>index:index"/>
+    <file name="jquery.museoverlay.js" crc="3946374898" ref="phone>index:tablet>index:index"/>
+    <file name="touchswipe.js" crc="3796284560" ref="phone>index:tablet>index:index"/>
+    <file name="musewpdisclosure.js" crc="513264147" ref="phone>index:tablet>index:index"/>
+    <file name="jquery.watch.js" crc="3766403489" ref="phone>index:phone>a-universidade:phone>a-cidade:phone>quem-somos:phone>o-curso-de-lcc:phone>contatofeedback:tablet>index:index:a-universidade:o-curso-de-lcc:quem-somos:a-cidade:contatofeedback"/>
+    <file name="html5shiv.js" crc="4241844378" ref="phone>index:phone>a-universidade:phone>a-cidade:phone>quem-somos:phone>o-curso-de-lcc:phone>contatofeedback:tablet>index:index:a-universidade:o-curso-de-lcc:quem-somos:a-cidade:contatofeedback"/>
+    <file name="form_check.php" crc="428372696" ref="phone>contatofeedback:contatofeedback"/>
+    <file name="form_throttle.php" crc="419817817" ref="phone>contatofeedback:contatofeedback"/>
+    <file name="form_process.php" crc="3787855599" ref="phone>contatofeedback:contatofeedback"/>
+    <file name="form-u2511.php" crc="4000062360" ref="phone>contatofeedback"/>
+    <file name="museredirect.js" crc="377126291" ref="index:a-universidade:o-curso-de-lcc:quem-somos:a-cidade:contatofeedback"/>
+    <file name="form-u2384.php" crc="168802086" ref="contatofeedback"/>
+  </folder>
+  <folder name="images">
+    <file name="facebook.png" crc="317936629" ref="phone>index:phone>a-universidade:phone>a-cidade:phone>quem-somos:phone>o-curso-de-lcc:phone>contatofeedback:tablet>index:index:a-universidade:o-curso-de-lcc:quem-somos:a-cidade:contatofeedback"/>
+    <file name="twitter.png" crc="4102706121" ref="phone>index:phone>a-universidade:phone>a-cidade:phone>quem-somos:phone>o-curso-de-lcc:phone>contatofeedback:tablet>index:index:a-universidade:o-curso-de-lcc:quem-somos:a-cidade:contatofeedback"/>
+    <file name="1596649_678014755578598_1077676928_o-u1524-fr.jpg" crc="4101852810" ref="phone>index"/>
+    <file name="u2284-4.png" crc="132343419" ref="phone>index"/>
+    <file name="icon.png" crc="397855693" ref="phone>index:tablet>index:index"/>
+    <file name="1.jpg" crc="479499418" ref="phone>index:tablet>index:index"/>
+    <file name="u2278-4.png" crc="4034614995" ref="phone>index"/>
+    <file name="03-u1523-fr.jpg" crc="4183849458" ref="phone>index"/>
+    <file name="u2264-4.png" crc="277566538" ref="phone>index"/>
+    <file name="placeholder.jpg" crc="4231620626" ref="phone>index:tablet>index:index"/>
+    <file name="placeholder-u1587-fr.jpg" crc="4271471145" ref="phone>index"/>
+    <file name="u2527-17.png" crc="66148316" ref="phone>contatofeedback"/>
+    <file name="u2527-17-r.png" crc="4155396417" ref="phone>contatofeedback"/>
+    <file name="u2527-17-m.png" crc="4155396417" ref="phone>contatofeedback"/>
+    <file name="u2527-17-fs.png" crc="4054652601" ref="phone>contatofeedback"/>
+    <file name="1596649_678014755578598_1077676928_o-u2596-fr.jpg" crc="3761047128" ref="tablet>index"/>
+    <file name="u2601-4.png" crc="38722449" ref="tablet>index"/>
+    <file name="u2610-4.png" crc="4200651599" ref="tablet>index"/>
+    <file name="03.jpg" crc="4109996739" ref="tablet>index:index"/>
+    <file name="u2604-4.png" crc="4070043845" ref="tablet>index"/>
+    <file name="1596649_678014755578598_1077676928_o.jpg" crc="4220187955" ref="index"/>
+    <file name="u2256-4.png" crc="146686789" ref="index"/>
+    <file name="u1689-4.png" crc="407543291" ref="index"/>
+    <file name="u2251-4.png" crc="3949297978" ref="index"/>
+    <file name="u1685-4.png" crc="3802848757" ref="index"/>
+    <file name="road.jpg" crc="336456884" ref="index"/>
+    <file name="cactus-crop-u1205.jpg" crc="401562993" ref="index"/>
+    <file name="cactus-crop-u1213.jpg" crc="401562993" ref="index"/>
+    <file name="u2393-17.png" crc="340292672" ref="contatofeedback"/>
+    <file name="u2393-17-r.png" crc="4056112303" ref="contatofeedback"/>
+    <file name="u2393-17-m.png" crc="4056112303" ref="contatofeedback"/>
+    <file name="u2393-17-fs.png" crc="141096617" ref="contatofeedback"/>
+  </folder>
+  <folder name="tablet">
+    <folder name="css">
+      <file name="index.css" crc="4130126263" ref="tablet>index"/>
+    </folder>
+    <file name="index.html" crc="4150587264" mt="1417754367974" redirect="true"/>
+  </folder>
+  <folder name="phone">
+    <folder name="css">
+      <file name="contatofeedback.css" crc="236459800" ref="phone>contatofeedback"/>
+      <file name="index.css" crc="4179667704" ref="phone>index"/>
+      <file name="o-curso-de-lcc.css" crc="98217536" ref="phone>o-curso-de-lcc"/>
+      <file name="a-cidade.css" crc="47741808" ref="phone>a-cidade"/>
+      <file name="a-universidade.css" crc="3937239990" ref="phone>a-universidade"/>
+      <file name="quem-somos.css" crc="4078917499" ref="phone>quem-somos"/>
+    </folder>
+    <file name="index.html" crc="4184207316" mt="1417754752446" redirect="true"/>
+    <file name="a-universidade.html" crc="475032809" mt="1417754793277" redirect="true"/>
+    <file name="a-cidade.html" crc="365782320" mt="1417754826956" redirect="true"/>
+    <file name="quem-somos.html" crc="3878316094" mt="1417754848221" redirect="true"/>
+    <file name="o-curso-de-lcc.html" crc="329178258" mt="1417754898805" redirect="true"/>
+    <file name="contatofeedback.html" crc="397409205" mt="1417755004873" redirect="true"/>
+  </folder>
+  <file name="index.html" crc="193665888" mt="1425597571898" redirect="true"/>
+  <file name="a-universidade.html" crc="3939742907" mt="1425644038351" redirect="true"/>
+  <file name="o-curso-de-lcc.html" crc="436935774" mt="1417754577955" redirect="true"/>
+  <file name="quem-somos.html" crc="4182318735" mt="1425039834228" redirect="true"/>
+  <file name="a-cidade.html" crc="4019973011" mt="1425039843766" redirect="true"/>
+  <file name="contatofeedback.html" crc="4098338947" mt="1425039856339" redirect="true"/>
+</manifest>
